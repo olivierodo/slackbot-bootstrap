@@ -1,0 +1,19 @@
+{
+  "name": "slackbot-team-bootstrap",
+  "version": "1.0.0",
+  "description": "Simple bootstrap to start a slackbo",
+  "main": "app.js",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "scripts": {
+    "start": "node  app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olivier Rodomond",
+  "license": "ISC",
+  "dependencies": {
+    "botkit": "^0.6.0",
+    "debug": "^3.0.1"
+  }
+}

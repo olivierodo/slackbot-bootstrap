@@ -4,7 +4,7 @@
   "description": "Simple bootstrap to start a slackbo",
   "main": "app.js",
   "engines": {
-    "node": "5.9.1"
+    "node": "8.9.0"
   },
   "scripts": {
     "start": "node  app.js",

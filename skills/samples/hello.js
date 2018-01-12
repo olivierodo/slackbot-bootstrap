@@ -12,11 +12,14 @@ const config = {
 
 module.exports = function(options) {
   options = Object.assign(config, options);
-  const setup = (bot) => {
-    bot.controller.hears(options.intents, options.events.join(),  (bot, message) => {
+  d('Hello : options :', options);
+
+  const setup = (bot, controller) => {
+    d('Setup the Hello skill');
+    controller.hears(options.intents, options.events.join(),  (bot, message) => {
       bot.reply(message, { text: 'Hi'});
     });
   }
 
-  return {name , setup, help : options.help};
+  return {name , setup, options};
 };

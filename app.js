@@ -11,13 +11,13 @@ var bot = controller.spawn({
     retry : 10
 }).startRTM();
 
-bot.controller = controller;
 bot.skills = [
   require('./skills/samples/hello')(), // Default setup.
-  //require('./skills/samples/hello')({intents : ['hi']}), // Override the options
+  //require('./skills/samples/hello')({intents : ['hi']}), // Override the options to trigger the skill on the "Hi" word
 ];
 
-bot.skills.forEach(_ => _.setup.apply(this, [bot]));
+d('Setting up the skills');
+bot.skills.forEach(_ => _.setup.apply(null, [bot, controller]));
 
 controller.on('rtm_close', function(bot, err) {
  console.log(err);
